@@ -1,0 +1,28 @@
+name: auto_entity
+description: "Lightweight Dart/Flutter code generator for JSON serialization and model-entity mapping."
+version: 1.0.0
+homepage:
+
+publish_to: "none"
+
+environment:
+  sdk: ^3.10.1
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  meta: ^1.17.0
+  build: ^4.0.3
+  source_gen: ^4.1.1
+  analyzer: ^9.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.10.4
+
+
+# The following section is specific to Flutter packages.
+flutter:

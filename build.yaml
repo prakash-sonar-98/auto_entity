@@ -1,0 +1,16 @@
+targets:
+  $default:
+    builders:
+      auto_entity:auto_entity:
+        generate_for:
+          - lib/**.dart
+
+builders:
+  auto_entity:
+    import: "package:auto_entity/builder.dart"
+    builder_factories: ["autoEntityBuilder"]
+    build_extensions:
+      ".dart":
+        - ".auto_entity.g.dart"
+    auto_apply: dependents
+    build_to: source
