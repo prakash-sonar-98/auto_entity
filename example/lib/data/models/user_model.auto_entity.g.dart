@@ -13,29 +13,29 @@ part of 'user_model.dart';
 UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
   id: json['user_id'] as String?,
   name: json['user_name'] as String?,
-  createdAt: json['created_at'] as String?,
-  display: json['displayName'] as String?,
+  dob: json['date_of_birth'] as String?,
+  displayName: json['display_name'] as String?,
 );
 
 Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
   'user_id': instance.id,
   'user_name': instance.name,
-  'created_at': instance.createdAt,
-  'displayName': instance.display,
+  'date_of_birth': instance.dob,
+  'display_name': instance.displayName,
 };
 
 extension UserModelEntityExtension on UserModel {
   UserEntity toEntity() => UserEntity(
     id: id,
     name: name,
-    createdAt: createdAt == null ? null : DateTime.parse(createdAt!),
-    displayName: display,
+    dob: dob == null ? null : DateTime.parse(dob!),
+    displayName: displayName,
   );
 
   static UserModel fromEntity(UserEntity entity) => UserModel(
     id: entity.id,
     name: entity.name,
-    createdAt: entity.createdAt?.toIso8601String(),
-    display: entity.displayName,
+    dob: entity.dob?.toIso8601String(),
+    displayName: entity.displayName,
   );
 }

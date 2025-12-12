@@ -1,6 +1,6 @@
 name: auto_entity
 description: "Lightweight Dart/Flutter code generator for JSON serialization and model-entity mapping."
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/prakash-sonar-98/auto_entity
 repository: https://github.com/prakash-sonar-98/auto_entity
 issue_tracker: https://github.com/prakash-sonar-98/auto_entity/issues

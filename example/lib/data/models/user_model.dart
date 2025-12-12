@@ -1,6 +1,6 @@
 import 'package:auto_entity/auto_entity.dart';
 
-import 'user_entity.dart';
+import '../../domain/entity/user_entity.dart';
 
 part 'user_model.auto_entity.g.dart';
 
@@ -13,16 +13,16 @@ class UserModel {
   final String? name;
 
   @AutoField(
-    name: 'created_at',
+    name: 'date_of_birth',
     toEntity: 'value == null ? null : DateTime.parse(value!)',
     fromEntity: 'value?.toIso8601String()',
   )
-  final String? createdAt;
+  final String? dob;
 
-  @AutoField(name: 'displayName', entityName: 'displayName')
-  final String? display;
+  @AutoField(name: 'display_name', entityName: 'displayName')
+  final String? displayName;
 
-  const UserModel({this.id, this.name, this.createdAt, this.display});
+  const UserModel({this.id, this.name, this.dob, this.displayName});
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>
       _$UserModelFromJson(json);
