@@ -202,14 +202,6 @@ final String tempOnly;
 
 ---
 
-## Formatting
-
-```bash
-dart format .
-```
-
----
-
 ## License
 
 MIT
